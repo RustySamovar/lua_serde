@@ -1,0 +1,10 @@
+[package]
+name = "lua_serde"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rlua = { version = "0.18", default-features = false, features = ["system-lua53"] }
+serde = { version = "1.0", features = ["derive"] }
