@@ -523,7 +523,7 @@ where T : Deserialize<'a>
 pub fn from_file<'a, T>(filename: &str) -> result::Result<T, std::io::Error>
 where T : Deserialize<'a>
 {
-    println!("Filename: {}", filename);
+    //println!("Filename: {}", filename);
 
     let mut f = fs::File::open(&filename)?;
     let metadata = fs::metadata(&filename)?;
