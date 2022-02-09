@@ -6,5 +6,10 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-rlua = { version = "0.18", default-features = false, features = ["system-lua53"] }
 serde = { version = "1.0", features = ["derive"] }
+
+[target.'cfg(windows)'.dependencies]
+rlua = { version = "0.18", default-features = false, features = ["builtin-lua53"] }
+
+[target.'cfg(unix)'.dependencies]
+rlua = { version = "0.18", default-features = false, features = ["system-lua53"] }
